@@ -4,8 +4,6 @@ github.com/alecthomas/kong v1.16.0 h1:g92/kUxBcdcTPOM79yE63viJgtcp5dNyrB3/O2cjYT
 github.com/alecthomas/kong v1.16.0/go.mod h1:wrlbXem1CWqUV5Vbmss5ISYhsVPkBb1Yo7YKJghju2I=
 github.com/alecthomas/repr v0.5.2 h1:SU73FTI9D1P5UNtvseffFSGmdNci/O6RsqzeXJtP0Qs=
 github.com/alecthomas/repr v0.5.2/go.mod h1:Fr0507jx4eOXV7AlPV6AVZLYrLIuIeSOWtW57eE/O/4=
-github.com/gentlemanautomaton/signaler v0.0.0-20180126105343-ab8bba8a505a h1:I8BgZ4GS7rz9UeuNQjag0QI4a13H7nZZSOjde0TxmYU=
-github.com/gentlemanautomaton/signaler v0.0.0-20180126105343-ab8bba8a505a/go.mod h1:YOqh9ieFYbwuLkFnzcbW3vAnmQF4WybHlGQYd+OlnsY=
 github.com/gocarina/gocsv v0.0.0-20260628180327-50907998929c h1:kC7cxFK96H9RaTVHtnYXSWEGFmO9UBxclb/4/8EPjHA=
 github.com/gocarina/gocsv v0.0.0-20260628180327-50907998929c/go.mod h1:5YoVOkjYAQumqlV356Hj3xeYh4BdZuLE0/nRkf2NKkI=
 github.com/hexops/gotextdiff v1.0.3 h1:gitA9+qJrrTCsiCl7+kh75nPqQt1cx4ZkudSTLoUqJM=

@@ -4,17 +4,17 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"os/signal"
 	"syscall"
 	"time"
 
 	"github.com/alecthomas/kong"
-	"github.com/gentlemanautomaton/signaler"
 )
 
 func main() {
 	// Capture shutdown signals
-	shutdown := signaler.New().Capture(os.Interrupt, syscall.SIGTERM)
-	ctx := shutdown.Context()
+	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
+	defer stop()
 
 	// Parse configuration
 	var conf Config
