@@ -2,8 +2,10 @@
 
 A regular expression file rename tool and library written in Go.
 
+## Usage
+
 ```
-Usage: refret.exe --name="migration" --root=STRING [<pattern> ...]
+Usage: refret.exe --name="migration" --root=STRING [<pattern> ...] [flags]
 
 Searches for and optionally renames files according to regular expression
 patterns. It matches file and directory names as it traverses a file system from
@@ -31,4 +33,25 @@ Flags:
   -c, --concurrency=32      Maximum number of concurrent read operations during
                             scanning ($CONCURRENCY).
       --proceed             Proceed with renaming operations ($PROCEED).
+```
+
+## Patterns
+
+Regular expressions are interpreted according to Go's regular expression
+engine. Go has excellent documentation for the regular expression syntax
+that it supports, which can be found here:
+
+https://pkg.go.dev/regexp/syntax
+
+The sole exception to these parsing rules is the special interpretation
+of the first `/` character within a pattern, which is used by `refret` to
+distinguish between the matching expression and the substitution
+expression.
+
+Substitutions can refer to capture groups by their numbered order, like `$1`
+and `$2`. In the following example pattern, the first two words in each file
+name would be reversed:
+
+```
+^(\w+) (\w+)/$2 $1
 ```
