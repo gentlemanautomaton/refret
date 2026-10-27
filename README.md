@@ -55,3 +55,22 @@ name would be reversed:
 ```
 ^(\w+) (\w+)/$2 $1
 ```
+
+## Examples
+
+### Change PDF document year suffix to prefix
+
+Linux:
+
+```
+refret --name "prefix-with-year" --root "~/justin.case/Documents/Test" "(.*) (\\d{4}-\\d{2}-\\d{2})\\.pdf/$2 $1.pdf"
+```
+
+Windows:
+
+```
+refret.exe --name "prefix-with-year" --root "C:\Users\justin.case\Documents\Test" "(.*) (\d{4}-\d{2}-\d{2})\.pdf/$2 $1.pdf"
+```
+
+* `Document A 2009-09-10.pdf` → `2009-09-10 Document A.pdf`
+* `Document B 2011-12-01.pdf` → `2011-12-01 Document B.pdf`
